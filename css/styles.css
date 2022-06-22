@@ -4,6 +4,7 @@
     --font-title: #212121;
     --accent: #2196f3;
     --font-p: #757575;
+    --header-border: #ececec;
     --bg-order: #2f303a;
     --font-order: #fff;
     --font-active-button: #fff;
@@ -20,40 +21,87 @@ body {
     font-family: 'roboto', sans-serif;
     color: var(--font-p);
     background-color: var(--bg-body);
-    text-decoration: none;
     font-size: 14px;
     line-height: 1.14;
     font-weight: 400;
 }
 
-/*-UI home page-*/
-/*-header-*/
-.list {
-    list-style: none;
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
 }
 
-.nav a{
+.section {
+    margin: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    padding: 0;
+    margin: 0;
+}
+
+/*-UI home page-*/
+/*-header-*/
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+.nav {
+    width: 1600px;
+    border-bottom: 1px solid var(--header-border);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .link{
     font-weight: 500;
     text-decoration: none;
     color: var(--font-title);
+    letter-spacing: 0.02em;
 }
 
-.nav a:focus, a:hover {
+.nav .link:focus, .nav .link:hover {
     color: var(--accent);
 }
 
-.logo {
+.nav-logo {
+    display: block;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    letter-spacing: 0.03em;
     color: var(--font-title);
-
+    text-decoration: none;
+    letter-spacing: 0.03em;
 }
 
-.nav .logo:hover, .logo:focus .logo:active {
+.nav .nav-logo:hover, .nav-logo:focus .nav-logo:active {
     color:var(--font-title);
 }
 
@@ -61,12 +109,38 @@ body {
     color: var(--accent)
 }
 
-.contacts a {
+.nav-menu {
+    display: flex;
+    margin-left: 93px;
+}
+
+.nav-menu .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.nav-menu-item + .nav-menu-item{
+    margin-left: 50px;
+}
+
+.contacts .link {
     text-decoration: none;
     color: var(--font-p)
 }
 
-.contacts a:hover, a:focus {
+.contacts .link:hover, .link:focus {
     color: var(--accent);
 }
 
@@ -76,12 +150,19 @@ body {
 
 /*-main-*/
 
+
 /*-order-*/
+
 .order{
-        background-color: var(--bg-order);
+    width: 1600px;
+    padding: 200px;
+    background-color: var(--bg-order);
 }
-.order h1{
-    text-align: center;
+
+.order-title{
+    width: 696px;
+    padding: 0;
+    margin-bottom: 40px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -91,6 +172,8 @@ body {
 }
 
 .order-button {
+    min-width: 200px;
+    padding: 10px 32px;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -109,6 +192,14 @@ background-color: var(--bg-hover-buton-order);
 
 /*-preferences-*/
 
+.preferences {
+    width: 1600px;
+}
+
+.pref-list {
+    display: inline-block;
+}
+
 .preferences h3{
     font-weight: 700;
     font-size: 14px;
@@ -124,6 +215,16 @@ background-color: var(--bg-hover-buton-order);
 }
 
 /*-what we do-*/
+
+.what-we-do {
+    width: 1600px;
+}
+
+.what-list {
+display: inline-block;
+padding-top: 50px;
+}
+
 .what-we-do h2{
     font-weight: 700;
     font-size: 36px;
@@ -137,28 +238,30 @@ background-color: var(--bg-hover-buton-order);
 }
 
 /*-our team-*/
+
 .our-team {
+    width: 1600px;
     background-color: var(--bg-our-team);
-    text-align: center;
 }
+
+.team-list {
+    display: inline-block;
+    padding-top: 50px;
+}
+
 .our-team h2 {
         font-weight: 700;
         font-size: 36px;
         line-height: 1.17;
         color: var(--font-title);
+        letter-spacing: 0.03em;
 }
+
 .our-team li{
     background-color: var(--bg-body);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
-
-.our-team h2 {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    color: var(--font-title);
-    letter-spacing: 0.03em;
+    text-align: center;
 }
 
 .our-team h3{
@@ -172,8 +275,16 @@ background-color: var(--bg-hover-buton-order);
 
 /*-UI portfolio-*/
 /*-buttons-*/
+.filter {
+}
+
+.buttons{
+    display: inline-block;
+    margin-bottom: 50px;
+}
 
 .buttons button{
+    padding: auto, 22px;
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
@@ -182,7 +293,7 @@ background-color: var(--bg-hover-buton-order);
     letter-spacing: 0.03em;
     color: var(--font-title);
     background-color: var(--bg-button);
-    border: 0;
+    border: 1px transparent;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -190,10 +301,18 @@ background-color: var(--bg-hover-buton-order);
 .buttons button:hover, button:focus {
     color:var(--font-active-button);
     background-color: var(--accent);
+}
 
+.filter {
+    width: 1600px;
 }
 
 /*-portfolio-*/
+
+.portfolio {
+    display: inline-block;
+}
+
 .portfolio h2{
     font-weight: 700;
     font-size: 18px;
@@ -213,25 +332,40 @@ background-color: var(--bg-hover-buton-order);
     text-decoration: none;
 }
 
-.portfolio li{
+/* .portfolio li{
     width: 370px;
     border: 1px solid #EEEEEE;
-}
+} */
 
 
 /*-footer-*/
+
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 1600px;
     background-color: var(--bg-footer);
     line-height: 1.71;
     letter-spacing: 0.03em;
-
 }
 
-.footer a{
+.footer .link{
     text-decoration: none;
 }
 
-.footer .logo {
+.footer-logo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--footer-text);
+}
+
+.footer .link:hover, .footer .link:focus, .footer .link:active {
     color: var(--footer-text);
 }
 
@@ -239,11 +373,12 @@ background-color: var(--bg-hover-buton-order);
     font-style: normal;
     color: var(--footer-text);
 }
-
-.footer-contacts a {
+.footer-contacts {
+}
+.footer-contacts .link {
     color: var(--footer-contacts);
 }
 
-.footer-contacts a:hover, a:focus {
+.footer-contacts .link:hover, .link:focus {
     color: var(--accent);
 }
