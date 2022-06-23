@@ -14,6 +14,7 @@
     --footer-text: #fff;
     --footer-contacts: rgba(255, 255, 255, 0.6);
     --bg-button: #f5f4fa;
+    --border-card: #eeeeee;
 }
 
 /*-base-*/
@@ -358,9 +359,10 @@ justify-content: center;
 }
 
 .filter-list .item{
-    width: calc((100% -60px) / 3);
+    width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+    border: 1px solid var(--border-card);
 }
 
 .filter-list .item:nth-child(3n) {
@@ -396,13 +398,8 @@ justify-content: center;
     text-align: left;
 }
 
-.filter-list a{
+.filter-list .link{
     text-decoration: none;
-}
-
-.filter-list .item{
-    width: 370px;
-    border: 1px solid #EEEEEE;
 }
 
 
