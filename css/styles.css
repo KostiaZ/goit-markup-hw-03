@@ -358,6 +358,7 @@ justify-content: center;
 }
 
 .filter-list .item{
+    width: calc((100% -60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
 }
@@ -399,7 +400,7 @@ justify-content: center;
     text-decoration: none;
 }
 
-.filter-list li{
+.filter-list .item{
     width: 370px;
     border: 1px solid #EEEEEE;
 }
