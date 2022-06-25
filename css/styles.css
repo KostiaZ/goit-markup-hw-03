@@ -70,7 +70,6 @@ h1, h2, h3, h4, h5, h6, p, ul {
 
 
 .nav {
-    width: 1600px;
     border-bottom: 1px solid var(--header-border);
 }
 
@@ -155,8 +154,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
 /*-order-*/
 
 .order{
-    width: 1600px;
-    padding: 200px;
+    padding: 200px 0px;
     background-color: var(--bg-order);
 }
 
@@ -194,8 +192,6 @@ background-color: var(--bg-hover-buton-order);
 /*-preferences-*/
 
 .preferences {
-    width: 1600px;
-
 }
 
 .pref-list {
@@ -231,7 +227,6 @@ background-color: var(--bg-hover-buton-order);
 /*-what we do-*/
 
 .what-we-do {
-    width: 1600px;
     padding-top: 0px;
 }
 
@@ -264,25 +259,20 @@ justify-content: center;
 /*-our team-*/
 
 .our-team {
-    width: 1600px;
     background-color: var(--bg-our-team);
 }
 
 .team-list {
     display: flex;
-    padding-top: 50px;
-}
-
-.our-team .photo {
-    margin-bottom: 30px;
 }
 
 .our-team .title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.17;
-        color: var(--font-title);
-        letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: var(--font-title);
+    letter-spacing: 0.03em;
 }
 
 .our-team .item{
@@ -297,6 +287,10 @@ justify-content: center;
     margin-right: 0px;
 }
 
+.our-team .card-title {
+    padding: 30px 0;
+}
+
 .our-team .name{
     margin-bottom: 10px;
     font-weight: 500;
@@ -307,7 +301,6 @@ justify-content: center;
 }
 
 .our-team .prof {
-    margin-bottom: 50px;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
@@ -315,9 +308,6 @@ justify-content: center;
 
 /*-UI portfolio-*/
 /*-buttons-*/
-.filter {
-    width: 1600px;
-}
 
 .buttons{
     display: flex;
@@ -373,28 +363,24 @@ justify-content: center;
     margin-bottom: 0px;
 }
 
-.filter-list .img {
-    margin-bottom: 20px;
-}
-
 .filter-list .title{
-    margin-left: 24px;
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--font-title);
-    text-align: left;
 }
 
 .filter-list .category{
-    margin-left: 24px;
-    margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--font-p);
+}
+
+.filter-list .card-title {
+    padding: 20px 24px;
     text-align: left;
 }
 
@@ -406,9 +392,7 @@ justify-content: center;
 /*-footer-*/
 
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    width: 1600px;
+    padding: 60px 0px;
     background-color: var(--bg-footer);
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -434,16 +418,25 @@ justify-content: center;
     color: var(--footer-text);
 }
 
-.footer address{
+.footer .address{
+    margin-bottom: 9px;
     font-style: normal;
     color: var(--footer-text);
 }
-.footer-contacts {
-}
+
 .footer-contacts .link {
+    font-style: normal;
     color: var(--footer-contacts);
+}
+
+.footer-contacts .mail {
+    margin-bottom: 9px;
 }
 
 .footer-contacts .link:hover, .link:focus {
     color: var(--accent);
+}
+
+.footer-contacts .mail {
+    margin-bottom: 9px;
 }
